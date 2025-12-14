@@ -8,7 +8,10 @@ from rest_framework import (status,
 from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 
-from cinema.models import Movie, Genre, Actor, CinemaHall
+from cinema.models import (Movie,
+                           Genre,
+                           Actor,
+                           CinemaHall)
 from cinema.serializers import (MovieSerializer,
                                 GenreSerializer,
                                 ActorSerializer,
