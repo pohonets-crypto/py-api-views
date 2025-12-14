@@ -20,13 +20,6 @@ cinema_hall_detail = CinemaHallViewSet.as_view(
      "put": "update",
      "patch": "partial_update",
      "delete": "destroy"})
-movie_list = MovieViewSet.as_view(
-    {"get": "list", "post": "create"})
-movie_detail = MovieViewSet.as_view(
-    {"get": "retrieve",
-     "put": "update",
-     "patch": "partial_update",
-     "delete": "destroy"})
 
 urlpatterns = [
     path("genres/", GenreList.as_view(), name="genres-list"),
@@ -37,7 +30,7 @@ urlpatterns = [
          name="cinema-hall-list"),
     path("cinema_halls/<int:pk>/",
          cinema_hall_detail,
-         name="cinema-hall-list"),
+         name="cinema-hall-detail"),
 ] + router.urls
 
 app_name = "cinema"
